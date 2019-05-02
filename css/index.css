@@ -1,1 +1,514 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* own code starts here */
+/* Variables and Mixins */
+.no-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.little-margin {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.h2-type {
+  margin-left: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+/* CSS starts here */
+body {
+  overflow-x: hidden;
+}
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+body .container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  body .container {
+    width: 100%;
+    margin: 20 auto;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+}
+body .container div {
+  margin: auto 1rem;
+}
+@media (max-width: 900px) {
+  body .container .nav {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: rgba(212, 29, 29, 0.3);
+  }
+}
+body .container .navBar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 900px) {
+  body .container .navBar {
+    max-width: 100%;
+    margin: 2rem 0;
+    padding-top: 0rem !important;
+    margin-top: 0rem !important;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+body .container .navBar a {
+  font-family: "Merriweather", serif;
+  color: black;
+  margin: 4.5rem 1.5rem 1.5rem 1.5rem;
+  text-decoration: none;
+}
+body .container .navBar a:hover {
+  text-decoration: underline;
+  background: rgba(10, 82, 141, 0.2);
+  border-radius: 4px;
+}
+body .container .header {
+  display: flex;
+  flex-direction: column;
+  background-color: #e9ecef;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding-bottom: 70px;
+  margin-top: 0px;
+  margin-right: 0;
+}
+body .container .header .header-image {
+  margin-left: 2.5rem;
+  margin-top: 4rem;
+}
+body .container .header .header-content {
+  margin-left: 0px 0px 0px 0px !important;
+  width: 100% !important;
+}
+body .container .header .header-content p,
+body .container .header .header-content form {
+  margin-left: 1.5rem;
+}
+body .container button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: #808080;
+  border-radius: 6px;
+  color: white;
+  font-size: 20px;
+}
+body .container button:hover {
+  background: rgba(10, 82, 141, 0.6);
+}
+@media (max-width: 900px) {
+  body .container .seperator {
+    display: none;
+  }
+}
+body .container .header:hover {
+  background: rgba(10, 82, 141, 0.2);
+}
+body .container h2 {
+  font-size: 25px;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid lightgrey;
+}
+body .container p {
+  font-size: 18px !important;
+}
+body .container .middle {
+  display: flex;
+}
+@media (max-width: 900px) {
+  body .container .middle {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+body .container .middle .middleLeft {
+  width: 49%;
+  margin-left: 0px;
+}
+body .container .middle .middleLeft h2 {
+  margin-left: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+body .container .middle .middleLeft p {
+  word-spacing: 2.8px;
+  line-height: 125%;
+}
+body .container .middle .middleRight {
+  width: 49%;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+body .container .middle .middleRight ul > li {
+  border: 1px solid lightgrey;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+}
+body .container .middle .middleRight h2 {
+  margin-left: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+@media (max-width: 900px) {
+  body .container .bottom {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+body .container .bottom .bottom-text {
+  margin-left: 0px;
+}
+body .container .bottom .bottom-text h2 {
+  margin-top: 1.5rem;
+  margin-left: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+body .container .bottom .bottom-table {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+body .container .bottom .bottom-table th {
+  font-size: 18px;
+  font-weight: bold;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  padding: 0.7rem 1rem 0.7rem 1rem;
+  text-align: left;
+}
+body .container .bottom .bottom-table td {
+  font-size: 18px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+}
+body .container .bottom .bottom-table .dark {
+  background-color: #e9ecef;
+}
+body .container .bottom .bottom-table .bold {
+  font-weight: bold;
+}
+body .container .contact {
+  margin-top: 2rem;
+}
+body .container .contact .contact-container {
+  margin-left: 0px;
+  margin-right: 0px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  /* Style the submit button with a specific background color etc */
+  /* When moving the mouse over the submit button, add a darker green color */
+}
+@media (max-width: 900px) {
+  body .container .contact .contact-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+body .container .contact .contact-container input[type="text"],
+body .container .contact .contact-container select,
+body .container .contact .contact-container textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+  /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+body .container .contact .contact-container input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body .container .contact .contact-container input[type="submit"]:hover {
+  background-color: #45a049;
+}
+body .container footer {
+  background-color: #808080;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+/* Effects and Hovers*/
+.slider-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0px;
+}
+@media (max-width: 900px) {
+  .slider-wrapper {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+.slider {
+  height: 50px !important;
+  padding-left: 15px;
+  overflow: hidden;
+  width: 45%;
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+  margin-left: 0px;
+}
+@media (max-width: 900px) {
+  .slider {
+    width: 100%;
+  }
+}
+.slider div {
+  color: black;
+  height: 50px;
+  padding: 2px 0px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: 1.5rem;
+  padding-left: 0px !important;
+  width: 100%;
+}
+.slider-text1 {
+  animation: slide 15s linear infinite;
+  font-size: 45px;
+  text-align: left !important;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 5px;
+}
+@media (max-width: 900px) {
+  .slider-text1 {
+    font-size: 200%;
+    margin-left: 0px !important;
+  }
+}
+.slider-text2 {
+  font-size: 45px;
+  text-align: left !important;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 5px;
+}
+@media (max-width: 900px) {
+  .slider-text2 {
+    font-size: 200%;
+    margin-left: 0px !important;
+  }
+}
+.slider-text3 {
+  font-size: 45px;
+  text-align: left !important;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 5px;
+}
+@media (max-width: 900px) {
+  .slider-text3 {
+    font-size: 200%;
+    margin-left: 0px !important;
+  }
+}
+h1 {
+  font-size: 50px;
+}
+@keyframes slide {
+  0% {
+    margin-top: -300px;
+  }
+  5% {
+    margin-top: -99px;
+  }
+  28% {
+    margin-top: -99px;
+  }
+  33% {
+    margin-top: -46px;
+  }
+  38% {
+    margin-top: -46px;
+  }
+  69% {
+    margin-top: -46px;
+  }
+  71% {
+    margin-top: 2px;
+  }
+  100% {
+    margin-top: 2px;
+  }
+}
